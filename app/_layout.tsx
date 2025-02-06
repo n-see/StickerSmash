@@ -1,14 +1,17 @@
 import { Stack, Tabs } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 export default function RootLayout() {
   return(
-  
-  <Stack>
-      <Stack.Screen name="index" options={{
-        headerTitle: "Sticker Smash",
-        headerLeft: () => <></>
-      }}/>
-      <Stack.Screen name="+not-found"/>
-  </Stack>
+  <>
+    <StatusBar style="light"/>
+    <Stack>
+        <Stack.Screen name="(tabs)" options={{
+          headerTitle: "Sticker Smash",
+          headerShown: false
+        }}/>
+        <Stack.Screen name="+not-found"/>
+    </Stack>
+  </>
     )
 }
